@@ -1,4 +1,5 @@
 import express, { Request, Response } from 'express';
+import { router as diaryRouter } from './routes/diaries';
 
 const app = express();
 
@@ -9,6 +10,8 @@ app.get('/', (_req: Request, res: Response) => {
     message: 'working',
   });
 });
+
+app.use('/api/diaries', diaryRouter);
 
 app.listen(PORT, () => {
   console.log('server is running on ' + PORT);
