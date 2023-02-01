@@ -9,3 +9,10 @@ export interface DiaryEntry {
   temperature: number;
   comment: string;
 }
+
+/* export type NonSensitiveDiaryEntry = Pick<
+  DiaryEntry,
+  'id' | 'date' | 'weather' | 'visibility' | 'temperature'
+>; */
+
+export type NonSensitiveInfoDiaryEntry = Omit<DiaryEntry, 'comment'>;

@@ -15,7 +15,6 @@ app.get('/', (_req: Request, res: Response) => {
 });
 
 app.use('/api/diaries', diaryRouter);
-app.use('/api/diarie/', diaryRouter);
 
 app.listen(PORT, () => {
   console.log('server is running on ' + PORT);
