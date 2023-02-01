@@ -16,3 +16,16 @@ export interface DiaryEntry {
 >; */
 
 export type NonSensitiveInfoDiaryEntry = Omit<DiaryEntry, 'comment'>;
+
+export type Gender = 'Male' | 'Famale' | 'Other';
+
+export interface PatientsDiagnose {
+  id: string;
+  name: string;
+  dateOfBirth: string;
+  ssn: string;
+  gender: Gender;
+  occupation: string;
+}
+
+export type PublicPatient = Omit<PatientsDiagnose, 'ssn'>;
